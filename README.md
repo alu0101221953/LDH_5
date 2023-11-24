@@ -3,4 +3,4 @@
 ***alu0101221953***
 
 ---
-Pruebas unitarias desarrolladas para comprobar la correcta funcionalid de las clases que representan un vuelo en avión y los pasajeros.
+Pruebas unitarias desarrolladas para comprobar la correcta funcionalidad de las clases que representan un vuelo en avión y los pasajeros.
