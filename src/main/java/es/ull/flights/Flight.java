@@ -43,7 +43,7 @@ public class Flight {
         }
         this.flightNumber = flightNumber;
         if (seat < 0) {
-            throw new RuntimeException("Invalid number of seats");
+            throw new IllegalArgumentException("Invalid number of seats");
         }
         this.seats = seat;
     }

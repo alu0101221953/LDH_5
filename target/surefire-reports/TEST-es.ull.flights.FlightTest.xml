@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="es.ull.flights.FlightTest" time="0.037" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="es.ull.flights.FlightTest" time="0.047" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.5\bin"/>
-    <property name="sun.java.command" value="C:\Users\ALE0F7~1\AppData\Local\Temp\surefire3073834134946788377\surefirebooter2772643939314268985.jar C:\Users\alu0101221953\AppData\Local\Temp\surefire3073834134946788377 2023-11-24T11-50-36_450-jvmRun1 surefire9090518913585095223tmp surefire_015553572285690207045tmp"/>
+    <property name="sun.java.command" value="C:\Users\ALE0F7~1\AppData\Local\Temp\surefire17136433521887736291\surefirebooter7752708255321206851.jar C:\Users\alu0101221953\AppData\Local\Temp\surefire17136433521887736291 2023-11-24T12-01-08_931-jvmRun1 surefire17604747940151870210tmp surefire_05043385389035642516tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\alu0101221953\Downloads\Airport\target\test-classes;C:\Users\alu0101221953\Downloads\Airport\target\classes;C:\Users\alu0101221953\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.0\junit-jupiter-api-5.6.0.jar;C:\Users\alu0101221953\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\alu0101221953\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\alu0101221953\.m2\repository\org\junit\platform\junit-platform-commons\1.6.0\junit-platform-commons-1.6.0.jar;C:\Users\alu0101221953\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.0\junit-jupiter-engine-5.6.0.jar;C:\Users\alu0101221953\.m2\repository\org\junit\platform\junit-platform-engine\1.6.0\junit-platform-engine-1.6.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\ALE0F7~1\AppData\Local\Temp\surefire3073834134946788377\surefirebooter2772643939314268985.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\ALE0F7~1\AppData\Local\Temp\surefire17136433521887736291\surefirebooter7752708255321206851.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.5+9-LTS-191"/>
@@ -56,7 +56,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testFlightConstructorInvalidSeats" classname="es.ull.flights.FlightTest$FlightConstructorTest" time="0.024"/>
-  <testcase name="testFlightConstructor" classname="es.ull.flights.FlightTest$FlightConstructorTest" time="0.001"/>
-  <testcase name="testFlightConstructorInvalidFlightNumber" classname="es.ull.flights.FlightTest$FlightConstructorTest" time="0.001"/>
+  <testcase name="testFlightConstructorInvalidSeats" classname="es.ull.flights.FlightTest$FlightConstructorTest" time="0.015"/>
+  <testcase name="testFlightConstructor" classname="es.ull.flights.FlightTest$FlightConstructorTest" time="0"/>
+  <testcase name="testFlightConstructorInvalidFlightNumber" classname="es.ull.flights.FlightTest$FlightConstructorTest" time="0"/>
 </testsuite>
