@@ -38,6 +38,10 @@ public class PassengersTest {
                 new Passenger("12345678", "John Doe", "ESPAÑA");
             });
         }
+
+        @Test 
+        public void testPassengerToString() {
+            assertEquals("Passenger John Doe with identifier: 12345678A from ES", passenger.toString());
+        }
     }
-    
 }
