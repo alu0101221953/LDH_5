@@ -6,6 +6,8 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import es.ull.flights.Flight;
+
 public class PassengersTest {
 
     @Nested
@@ -42,6 +44,22 @@ public class PassengersTest {
         @Test 
         public void testPassengerToString() {
             assertEquals("Passenger John Doe with identifier: 12345678A from ES", passenger.toString());
+        }
+
+        @Test
+        public void testPassengerJoinFlight() {
+            Flight flight = new Flight("IB1234", 10);
+            passenger.joinFlight(flight);
+            assertEquals(flight, passenger.getFlight());
+            assertEquals(1, flight.getNumberOfPassengers());
+        }
+
+        @Test
+        public void testPassengerJoinFlightNoSeats() {
+            Flight flight = new Flight("IB1234", 0);
+            assertThrows(RuntimeException.class, () -> {
+                passenger.joinFlight(flight);
+            });
         }
     }
 }
