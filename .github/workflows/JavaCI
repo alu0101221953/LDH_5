@@ -1,4 +1,5 @@
 name: JavaCI
+
 on: 
   push:
     branches:
@@ -8,10 +9,10 @@ jobs:
   build:
     runs-on: ${{ matrix.os }}
     strategy:
-      max-parallel: 2
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
         java: [8,11,17]
+      max-parallel: 3
       steps:
         - name: Checkout code
           uses: actions/checkout@v3
@@ -21,13 +22,6 @@ jobs:
           with:
             java-version: ${{ matrix.java }}
             distribution: 'adopt'
-
-        - name: Cache SonarCloud packages
-          uses: actions/cache@v3
-          with:
-            path: ~/.sonar/cache
-            key: ${{ runner.os }}-sonar
-            restore-keys: ${{ runner.os }}-sonar
 
         - name: Build with Maven
           run: mvn -B package -f pom.xml
