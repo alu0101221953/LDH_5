@@ -14,8 +14,11 @@ jobs:
           command: mvn clean install
 
       - run:
-          name: Run Tests
+          name: Run Tests and Generate XML Reports
           command: mvn test
+
+      - store_test_results:
+          path: target/surefire-reports  # Ajusta la ruta según la configuración de tu proyecto
 
       - run:
           name: Creating Dummy Artifacts
