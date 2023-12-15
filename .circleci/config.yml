@@ -3,8 +3,16 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: ubuntu:latest
+      - image: maven:3.8.4-jdk-11
+    working_directory: /tmp
     steps:
+      - checkout
+
+      - run:
+          name: Building Project and Running Tests
+          command: |
+            mvn clean install
+
       - run:
           name: Creating Dummy Artifacts
           command: |
