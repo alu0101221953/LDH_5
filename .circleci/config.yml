@@ -4,22 +4,25 @@ jobs:
   build:
     docker:
       - image: maven:3.8.4-jdk-11
-    working_directory: ~/repo  # Cambiado el directorio de trabajo
+    working_directory: ~/repo
 
     steps:
       - checkout
 
       - run:
-          name: Building Project and Running Tests
-          command: |
-            mvn clean install
+          name: Build Project
+          command: mvn clean install
+
+      - run:
+          name: Run Tests
+          command: mvn test
 
       - run:
           name: Creating Dummy Artifacts
           command: |
-            echo "my artifact file" > /tmp/art-1;
-            mkdir /tmp/artifacts;
-            echo "my artifact files in a dir" > /tmp/artifacts/art-2;
+            echo "my artifact file" > /tmp/art-1
+            mkdir /tmp/artifacts
+            echo "my artifact files in a dir" > /tmp/artifacts/art-2
 
       - store_artifacts:
           path: /tmp/art-1
