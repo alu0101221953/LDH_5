@@ -4,7 +4,8 @@ jobs:
   build:
     docker:
       - image: maven:3.8.4-jdk-11
-    working_directory: /tmp
+    working_directory: ~/repo  # Cambiado el directorio de trabajo
+
     steps:
       - checkout
 
