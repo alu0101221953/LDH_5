@@ -17,6 +17,7 @@ jobs:
 
       - store_artifacts:
           path: /tmp/artifacts
+          destination: artifact-directory  # Agregado un destino para el segundo store_artifacts
 
   deploy:
     docker:
