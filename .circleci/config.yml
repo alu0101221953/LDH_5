@@ -18,6 +18,10 @@ jobs:
           paths:
             - target/
 
+      - store_test_results:
+          path: ~/repo/target/surefire-reports
+          destination: test-results
+
   deploy:
     docker:
       - image: openjdk:11-jre-slim
