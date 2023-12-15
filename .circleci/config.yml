@@ -1,7 +1,9 @@
 version: 2.1
+
 jobs:
   build:
-    working_directory: /tmp
+    docker:
+      - image: ubuntu:latest
     steps:
       - run:
           name: Creating Dummy Artifacts
@@ -16,22 +18,10 @@ jobs:
 
       - store_artifacts:
           path: /tmp/artifacts
-          destination: artifact-directory  # Agregado un destino para el segundo store_artifacts
-
-  deploy:
-    docker:
-      - image: openjdk:11-jre-slim
-    working_directory: ~/repo
-
-    steps:
-      - attach_workspace:
-          at: ~/repo
-
-      # Include any additional steps needed for deployment
+          destination: artifact-directory
 
 workflows:
   version: 2
   build_and_deploy:
     jobs:
       - build
-      # Add deploy job here if needed
