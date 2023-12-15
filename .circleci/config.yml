@@ -20,20 +20,13 @@ jobs:
       - store_test_results:
           path: target/surefire-reports  # Ajusta la ruta según la configuración de tu proyecto
 
-      - run:
-          name: Creating Dummy Artifacts
-          command: |
-            echo "my artifact file" > /tmp/art-1
-            mkdir /tmp/artifacts
-            echo "my artifact files in a dir" > /tmp/artifacts/art-2
-
       - store_artifacts:
-          path: /tmp/art-1
-          destination: artifact-file
+          path: target/surefire-reports  # Almacenar informes de pruebas como artefactos
+          destination: test-reports
 
       - store_artifacts:
           path: /tmp/artifacts
-          destination: artifact-directory
+          destination: other-artifacts
 
 workflows:
   version: 2
